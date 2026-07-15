@@ -1,0 +1,33 @@
+class market:
+    def __init__(self,name,add):
+        self.name=name
+        self.add=add
+cut1=market("harshith","alp")
+cut2=market("pranav","ktl")
+cut3=market("spranav","kktl")
+print(cut1.name,cut1.add)
+print(cut2.name,cut2.add)
+print(cut3.add,cut3.add)
+class smarket(market):
+    def __init__(self,name,add,custtype,blnc):
+        self.name=name
+        self.add=add
+        self.custtype=custtype
+        self.__blnc=blnc
+    def getblnc(self):
+        
+        return self.__blnc
+    def deposit(self,amt):
+        self.__blnc=self.__blnc+amt
+        print("deposited amount = ",amt,"updeted amount= ",self.__blnc)
+     
+pcust1=smarket("harshith","alp","prime",1000)
+pcust2=smarket("pranav","krt","prime",1000)
+pcust3=smarket("vinay","alp","prime",1000)  
+print(pcust1.name,pcust1.add,pcust1.custtype,pcust1.getblnc())
+print(pcust2.name,pcust1.add,pcust2.custtype,pcust2.getblnc())
+print(pcust3.name,pcust3.add,pcust3.custtype,pcust3.getblnc())
+
+
+pcust1.deposit(500)
+
