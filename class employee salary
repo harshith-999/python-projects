@@ -1,0 +1,26 @@
+class employee:
+    def __init__(self,name,salary,rating):
+        self.name=name
+        self.__salary=salary
+        self.__rating=rating
+    def getsalary(self):
+        return self.__salary
+    def getrating(self):
+        return self.__rating
+    
+        
+    def updetedsalary(self):
+        if self.__rating==2:
+            self.__salary=self.__salary+self.__salary*(10/100)
+            print(self.__salary)
+        if self.__rating==4:
+            self.__salary=self.__salary+self.__salary*(20/100)
+            print(self.__salary)   
+        if self.__rating==7:
+            self.__salary=self.__salary+self.__salary*(30/100)
+            print(self.__salary)    
+    
+e1=employee("harshith",150000,7)
+print(e1.getsalary())
+
+e1.updetedsalary()
