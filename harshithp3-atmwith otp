@@ -1,0 +1,46 @@
+import random as r
+print("#"*40)
+print("\t\t\tamount withdrawal ".upper())
+print("#"*40)
+ypin=9999
+tamount=5000
+accno=909090
+name="harshith"
+acc=int(input("enter account number = "))
+if acc==accno:
+    print("account found :")
+    amt=int(input("enter amount "))
+    if amt<=tamount:
+        print("-"*40)
+        print("\t\t amount found ")
+        
+        pin=int(input("enter pin : "))
+        if pin==ypin:
+            print("-"*40)
+            print("\t\tpin matched ".upper())
+            ootp=r.randint(1000,9999)
+            print("your otp : ".upper(),ootp)
+            otp=int(input("enter otp : "))
+            if otp==ootp:
+                print("-"*40)
+                print("\t\t\tproseccing your amount".upper())
+                print("DEAR ",name.upper(),"\t:")
+                print("  your amount= ",amt)
+                print("  updated amount= ",tamount-amt)
+                print("-"*40)
+                
+            else:
+                print("-"*40)
+                print("sorry otp not found")
+        else:
+            print("-"*40)
+            print("pin wrong")
+    else:
+        print("-"*40)
+        print("\t\tyour amount is less ".upper())
+else:
+    print("-"*40)
+    print("account not found ")
+print("#"*40)
+print("\t\tthank you visit again".upper())
+print("#"*40)
